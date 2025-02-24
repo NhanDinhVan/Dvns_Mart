@@ -41,7 +41,7 @@
 .header_top_right {
     // background: red;
     display: inline-flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     padding: 10px 0 13px;
     ul {
@@ -65,6 +65,78 @@
         span {
             font-size: 14px;
             margin-left: 3px;
+        }
+    }
+}
+
+.header__cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 0px;
+
+    .header__cart_price {
+
+    }
+    ul {
+        display: flex;
+        margin-right: 20px;
+
+        li {
+            list-style: none;
+            position: relative;
+            margin-left: 20px;
+
+            svg {
+                font-size: 25px;
+                color: map.get($theme-colors, "normal-text");
+            }
+
+            span {
+                color: white;
+                background: map.get($theme-colors, "main");
+                position: absolute;
+                height: 18px;
+                width: 18px;
+                display: inline-block;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 18px;
+                font-size: 13px;
+                font-weight: 600;
+                left: 20px;
+                top: -5px;
+            }
+        }
+    }
+}
+
+.header__logo {
+    padding: 20px 0;
+}
+
+.header__menu {
+    padding: 20px 0;
+    ul {
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                color: map.get($theme-colors, "bold-text");
+                text-transform: uppercase;
+                font-weight: bolder;
+                letter-spacing: 1px;
+                transition: all 0.3s;
+                padding: 5px 0;
+                display: block;
+            }
+        }
+        .active a {
+            color: map.get($theme-colors, "main");
         }
     }
 }
